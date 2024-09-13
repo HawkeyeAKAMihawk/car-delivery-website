@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+
+    text-decoration: none;
+    list-style: none;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header #logo img{
+    width: 120px;
+    height: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+header {
+    margin:0px 10px 0px 50px;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: space-between ;
+    align-content: center;
+
+}
+
+header nav a{
+    line-height: 30px ;
+    padding:0px 15px ;
+    white-space: nowrap;
+    border-radius: 10px;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+
+}
+header nav{
+    margin-left: 200px;
+    position: relative;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+header nav a:nth-child(7){
+    padding-right: 180px;
+}
+nav .hover{
+    background-color:rgba(128, 128, 128, 0.537);
+    position: absolute;
+    z-index: -1;
+    opacity:0;
+    transition: all 0.7s;
+    border-radius: 10px;
+    height: 30px;
+    display: inline-block;
+}
+
+nav a:nth-child(1):hover~.hover{
+    width: 85px;
+    opacity: 1;
+    left: 0;
+
+}
+nav a:nth-child(2):hover~.hover{
+    width: 85px;
+    opacity: 1;
+    left: 90px;
+    
+}
+nav a:nth-child(3):hover~.hover{
+    width: 85px;
+    opacity: 1;
+    left: 175px;
+    
+}
+nav a:nth-child(4):hover~.hover{
+    width: 85px;
+    opacity: 1;
+    left: 260px;
+    
+}
+nav a:nth-child(5):hover~.hover{
+    width: 100px;
+    opacity: 1;
+    left: 347px;
+    
+}
+nav a:nth-child(6):hover~.hover{
+    width: 110px;
+    opacity: 1;
+    left: 450px;
+    
+}
+nav a:nth-child(7):hover~.hover{
+    width: 110px;
+    opacity: 1;
+    left: 565px;
+    
+}
+
+nav a:nth-child(8):hover~.hover{
+    width: 80px;
+    opacity: 1;
+    left: 830px;
+}
+nav a:nth-child(9):hover~.hover{
+    width: 85px;
+    opacity: 1;
+    left: 905px;
+}
+nav a:nth-child(10):hover~.hover{
+    width: 72px;
+    opacity: 1;
+    left: 990px;
+}
+
+.main1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: auto;
+    flex: none;
+    flex-flow: column nowrap;
+   
+}
+
+.main1->div{
+    text-align: centre;
+    width: 100%;
+    height: 100%;
+    flex: none;
+}
+.main1 div img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.main2 {
+    position: relative;
+    
+
+}
+
+
+.head{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:40vh ;
+    flex-direction: column;
+    top: 0;
+
+
+}
+
+.head h1{
+    font-size: 45px;
+    font-weight: 500;
+    color: rgb(61, 61, 61);
+    padding-bottom: 5px;
+
+}
+
+
+.head span{
+    color: rgb(53,53,53);
+    font-size: 17px;
+}
+.head a{
+    color: rgb(53,53,53);
+    text-decoration: underline;
+    cursor: pointer;
+    text-underline-position: under;
+}
+
+.head a:hover{
+    text-decoration-thickness:2px ;
+}
+
+.login{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.login div{
+    display: flex;
+    justify-content: center ;
+    
+}
+
+.btn div{
+    align-items: center;
+    margin:0px 15px 0px 15px;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+
+}
+#order{
+    background-color: #393c41;
+    color: aliceblue;
+}
+
+#inv{
+    background-color: #dfd0d0;
+    color: black
+}
+#order , #inv{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.login .arrow{
+    height: 60px;
+    color: rgb(75, 75, 75);
+    font-size: 25px;
+    animation: updown 1.5s ease infinite;
+}
+
+@keyframes updown{
+    0%{
+        transform: translateY(0);
+    }
+    10%{
+        transform:translateY(5px);
+    }
+    20%{
+        transform: translateY(0);
+    }
+    30%{
+        transform:translateY(5px);
+    }
+    40%{
+        transform: translateY(0);
+    }
+    60%{
+        transform: translateY(5px);
+    }
+    80%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+.main .head h1{
+    animation: showspan 1s;
+}
+.main .head span{
+    animation: show 2s;
+}
+.main .login #order{
+    animation: order 3s;
+}
+.main .login #inv{
+    animation: inv 3s;
+}
+
+@keyframes inv{
+    0%{
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes order   {
+    0%{
+        transform:translateX(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes show{
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    30%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    70%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes showspan{
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.blur{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    z-index: 99;
+    transition: all 1s;
+    backdrop-filter: blur(4px);
+    background-color: #393c416e;
+
+}
+
+.blur.active{
+    display: block;
+
+}
+.hdn-side.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+.hdn-side{
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    width: 310px;
+    transform: translateX(320px);
+    transition: all 1.2s;
+    z-index: 100;
+    height: 100%;
+    overflow: scroll;
+    background-color: white;
+
+}   
+
+
+#mark{
+
+    display: flex;
+    justify-content: end;
+    padding: 30px;
+    background-color: white;
+    position: sticky;
+    z-index: 100;
+    right: 0;
+}
+
+#mark .fa-xmark{
+    font-size: 25px;
+    padding: 8px 10px;
+    transition: all 0.5s;
+    cursor : pointer;
+
+
+}
+#mark .fa-xmark:hover{
+    background-color: rgb(233,233,233);
+    border-radius: 50%;
+}
+
+.hdn-content{
+    padding: 5px 30px;
+    height: 100%;
+
+
+}
+.hdn-content li{
+    margin-bottom: 5px;
+    font-size: 15px;
+    padding: 10px 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+.hdn-content li:hover{
+    background-color: rgb(233,233,233);
+    border-radius: 15px;
+}
+
+.head{
+    opacity:0;
+
+}
+
+.head1{
+    opacity: 1;
+    transition: all 1.5s;
+}
+.head2 , .head3, .head4, .head5, .head6 , .head7 {
+    opacity: 0;
+    transition: all 1.5s;
+}
+.login{
+    opacity: 0;
+}
+.login1{
+    opacity: 1;
+    transition: all 1.5s;
+}
+.login2, .login3, .login4 , .login5, .login6 , .login7{
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.active{
+    opacity: 1;
+}
+.hide{
+    opacity: 0;
+}
+ .login7 .footer{
+    justify-content: space-between ;
+    display: flex;
+    padding: 0px 200px 10px 200px;
+    align-content: center;
+    
+
+}
+.footer a{
+    color: rgb(242, 234, 234);
+    font-weight: 100;
+}
